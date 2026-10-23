@@ -1,0 +1,31 @@
+# Versions of the environment STRIDES was developed and evaluated with
+# (Python 3.10, Windows, CUDA 12.6).
+#
+# PyTorch with CUDA 12.6 comes from the PyTorch index; on a machine without a
+# matching wheel there, pip falls back to the default build from PyPI. For
+# another CUDA version replace cu126 (see https://pytorch.org/get-started/).
+--extra-index-url https://download.pytorch.org/whl/cu126
+torch==2.9.1
+torchvision==0.24.1
+
+numpy==2.2.6
+scipy==1.15.3
+pandas==2.3.2
+matplotlib==3.9.4
+opencv-python==4.12.0.88
+tifffile==2024.9.20
+imagecodecs==2024.9.22      # lets tifffile read compressed TIFFs
+tqdm==4.67.1
+
+# needed by the DINOv3 repository when its backbone is loaded through torch.hub
+torchmetrics==1.8.2
+lightning-utilities==0.15.2
+termcolor==3.1.0
+
+# graphical interface
+PySide6==6.9.2
+
+# feature matching (SuperPoint + LightGlue); LightGlue is not on PyPI
+kornia==0.8.2
+kornia-rs==0.1.14
+lightglue @ git+https://github.com/cvg/LightGlue.git@eb42fee2d71449efb0aa5c10549752b5d75384d8

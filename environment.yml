@@ -1,0 +1,13 @@
+# conda env create -f environment.yml
+#
+# Python and pip from conda, everything else from requirements.txt, pinned to
+# the versions STRIDES was developed and evaluated with.
+name: strides
+channels:
+  - conda-forge
+dependencies:
+  - python=3.10.18
+  - pip=25.2
+  - git                     # pip needs it to install LightGlue from GitHub
+  - pip:
+      - -r requirements.txt
