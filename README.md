@@ -1,10 +1,12 @@
 # STRIDES
 
-We provide STRIDES, a framework for **S**elf-supervised **T**emporal**R**e-
-**I**dentification of **DE**ndritic **S**pines.
+We provide STRIDES, a framework for **S**elf-supervised **T**emporal 
+**R**e-**I**dentification of **DE**ndritic **S**pines.
 
-Given the spines at timepoint `t`, the pipeline predicts where each of them
-is at `t + 1`:
+<img width="1400" height="722" alt="Figure_1" src="https://github.com/user-attachments/assets/6681bfaa-c8ef-40de-a5a7-5875ed54d201" />
+
+Given the dendritic spines at timepoint `t`, the pipeline predicts where each of them
+is at `t + 1` in longitudinal microscopic volumes:
 
 1. **Coarse x/y.** SuperPoint + LightGlue match features between the
    maximum-intensity projections of the two stacks. Each landmark is moved by
@@ -36,6 +38,7 @@ training/
     models.py           embedding model, triplet loss, training loop
 environment.yml         conda environment
 requirements.txt        pip requirements (also used by environment.yml)
+.gitignore
 LICENSE
 ```
 
@@ -63,8 +66,8 @@ the pretrained backbone weights.
 
 The scripts are run from their own folder, e.g. `cd inference` first.
 
-Before running the GUI or inference.py, download our fine-tuned DINOv3 model
-and store it at `./checkpoints/strides_embedder.pth`:
+Before running the GUI or run_inference.py, download our fine-tuned DINOv3 model
+and store it at `./checkpoints/strides_embedder.pth`: 
 [STRIDES Embedder](https://zenodo.org/records/23467782)
 
 ## Hardware
