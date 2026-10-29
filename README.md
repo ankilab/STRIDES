@@ -3,6 +3,8 @@
 We provide STRIDES, a framework for **S**elf-supervised **T**emporal 
 **R**e-**I**dentification of **DE**ndritic **S**pines.
 
+Project website: [STRIDES](https://ankilab.github.io/STRIDES/)
+
 <img width="1400" height="722" alt="Figure_1" src="https://github.com/user-attachments/assets/6681bfaa-c8ef-40de-a5a7-5875ed54d201" />
 
 Given the dendritic spines at timepoint `t`, the pipeline predicts where each of them
